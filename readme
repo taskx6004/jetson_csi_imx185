@@ -1,0 +1,12 @@
+// For xcb_imx185 only
+1,connect xcb_imx185 to CSI-AB
+2,cp p2771-0000.conf.common to jetpack3.2/64_TX2/Linux_for_Tegra/   //overwrite the same file
+3,cp tegra186-quill-p3310-1000-c03-00-base-xcblite.dtb(HDMI only) or tegra186-quill-p3310-1000-c03-00-base-xcblite-edp.dtb(LCD+HDMI)  to jetpack3.2.1/64_TX2/Linux_for_Tegra/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb  //overwrite the file
+4,reflash the TX2 with all component
+5,cp extlinux.conf to /boot/extlinux/ 
+6,cp Image_xcblite to /boot/
+7, reboot   //lucky!
+
+
+### To test
+1, on TX2 run nvgstcapture
